@@ -1,0 +1,1 @@
+import httpx; import asyncio; async def test(): \n async with httpx.AsyncClient() as c: \n  r = await c.post('https://api.sarvam.ai/speech-to-text', headers={'api-subscription-key': 'sk_1ej736pu_k1I1gZebvYixjojxGcmI9KvT'}, files={'file': ('empty.wav', b'', 'audio/wav')}, data={'model': 'saarika:v2.5', 'language_code': 'hi-IN'})\n  print(r.status_code, r.text)\nasyncio.run(test())
